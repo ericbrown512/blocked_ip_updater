@@ -1,5 +1,7 @@
 const mysql = require('mysql2/promise');
 const config = require('../config');
+console.log(JSON.stringify(config));
+
 const pool = mysql.createPool(config.db);
 
 async function query(sql, params) {

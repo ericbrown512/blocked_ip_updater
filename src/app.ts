@@ -1,4 +1,9 @@
-const appHanlder = require('./index');
+require('dotenv').config()
 
-appHanlder.handler();
+const updater = require('./updater');
 
+const repoURL = 'https://github.com/firehol/blocklist-ipsets.git';
+const rootDir = './tmp'
+const repoDir = rootDir+'/firehol';
+
+updater.runUpdate(rootDir, repoDir, repoURL);

@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 const mysql = require('mysql2/promise');
 const config = require('../config');
+console.log(JSON.stringify(config));
 const pool = mysql.createPool(config.db);
 function query(sql, params) {
     return __awaiter(this, void 0, void 0, function* () {
